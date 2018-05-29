@@ -6,22 +6,8 @@ This is the backend service which runs along with ethereum and tracks the networ
 
 
 ## Prerequisite
-* eth, geth or pyethapp
-* node
+* ETC node
 * npm
-
-
-## Installation on an Ubuntu EC2 Instance
-
-Fetch and run the build shell. This will install everything you need: latest ethereum - CLI from develop branch (you can choose between eth or geth), node.js, npm & pm2.
-
-```bash
-bash <(curl https://raw.githubusercontent.com/Machete3000/etc-net-intelligence-api/master/bin/build.sh)
-```
-## Installation as docker container (optional)
-
-There is a `Dockerfile` in the root directory of the repository. Please read through the header of said file for
-instructions on how to build/run/setup. Configuration instructions below still apply.
 
 ## Configuration
 
@@ -50,16 +36,6 @@ Run it using pm2:
 cd ~/bin
 pm2 start processes.json
 ```
-
-## Updating
-
-To update the API client use the following command:
-
-```bash
-~/bin/www/bin/update.sh
-```
-
-It will stop the current netstats client processes, automatically detect your ethereum implementation and version, update it to the latest develop build, update netstats client and reload the processes.
 
 [travis-image]: https://travis-ci.org/Machete3000/etc-net-intelligence-api.svg
 [travis-url]: https://travis-ci.org/Machete3000/etc-net-intelligence-api
